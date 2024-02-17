@@ -1,4 +1,5 @@
 import pygame
+import Job_Listing
 
 pygame.init()
 
@@ -27,7 +28,7 @@ while running:
             running = False
 
     screen.fill("black")
-    pygame.draw.rect(screen, (255, 0, 0), (x, y, height, width))
+    pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
     pygame.display.update()
 
     # find keys that are pressed

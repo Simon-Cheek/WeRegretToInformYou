@@ -59,7 +59,7 @@ class SpecialistJob(JobListing):
         pass
 
 
-# Software Engineer Job: Specialist
+# Software Engineer Job: Generalist
 class GeneralistJob(JobListing):
     def __init__(self):
         super().__init__()
@@ -67,6 +67,8 @@ class GeneralistJob(JobListing):
 
     def calculate_generalist(self):
         pass
+
+
 
 
 
