@@ -6,6 +6,8 @@ from Jobs.Specialist import SpecialistJob
 from Jobs.FrontEnd import FrontEndJob
 from Jobs.FullStack import FullStackJob
 
+test = BackEndJob()
+print(test.skills)
 
 pygame.init()
 
