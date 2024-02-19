@@ -6,7 +6,7 @@ import random
 class BackEndJob(JobListing):
     def __init__(self):
         super().__init__()
-        self.potential_languages = ["python", "php", "c_sharp", "javascript"]
+        self.potential_languages = ["python", "php", "c_sharp", "javascript", "java"]
         self._calculate_back_end()
 
     def _calculate_back_end(self):
@@ -34,16 +34,16 @@ class BackEndJob(JobListing):
         chance = random.random()
         if chance >= 0.8:
             self.primary = "python"
-            self.potential_languages.remove("python")
-        elif chance >= 0.55:
+        elif chance >= 0.6:
+            self.primary = "java"
+        elif chance >= 0.35:
             self.primary = "php"
-            self.potential_languages.remove("php")
-        elif chance >= 0.2:
+        elif chance >= 0.15:
             self.primary = "c_sharp"
-            self.potential_languages.remove("c_sharp")
         else:
             self.primary = "javascript"
-            self.potential_languages.remove("javascript")
+
+        self.potential_languages.remove(self.primary)
 
         # sets the average skill level for primary language (range)
         self.skills[self.primary] = random.randint(15, 22)

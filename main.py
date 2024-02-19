@@ -9,6 +9,18 @@ from Jobs.FullStack import FullStackJob
 test = BackEndJob()
 print(test.skills)
 
+test1 = FrontEndJob()
+print(test1.skills)
+
+test2 = FullStackJob()
+print(test2.skills)
+
+test3 = GeneralistJob()
+print(test3.skills)
+
+test4 = SpecialistJob()
+print(test4.skills)
+
 pygame.init()
 
 
