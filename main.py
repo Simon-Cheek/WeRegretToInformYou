@@ -5,21 +5,25 @@ from Jobs.Generalist import GeneralistJob
 from Jobs.Specialist import SpecialistJob
 from Jobs.FrontEnd import FrontEndJob
 from Jobs.FullStack import FullStackJob
+from apply import apply
+from player import Player
 
-test = BackEndJob()
-print(test.skills)
+t = Player()
+t.skills["cpp"] = 24
+t.skills["dsa"] = 20
+t.skills["python"] = 12
+t.skills["sql"] = 10
+t.skills["javascript"] = 10
+t.skills["c"] = 10
 
-test1 = FrontEndJob()
-print(test1.skills)
+wins = 0
+for i in range(100):
+    test = GeneralistJob()
+    if apply(test, t):
+        wins += 1
+        print(test.skills)
+print(wins)
 
-test2 = FullStackJob()
-print(test2.skills)
-
-test3 = GeneralistJob()
-print(test3.skills)
-
-test4 = SpecialistJob()
-print(test4.skills)
 
 pygame.init()
 
