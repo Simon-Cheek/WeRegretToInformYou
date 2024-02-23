@@ -1,4 +1,4 @@
-import pygame
+import tkinter as tk
 
 from Jobs.BackEnd import BackEndJob
 from Jobs.Generalist import GeneralistJob
@@ -8,70 +8,63 @@ from Jobs.FullStack import FullStackJob
 from apply import apply
 from player import Player
 
-t = Player()
-t.skills["cpp"] = 24
-t.skills["dsa"] = 20
-t.skills["python"] = 12
-t.skills["sql"] = 10
-t.skills["javascript"] = 10
-t.skills["c"] = 10
-
-wins = 0
-for i in range(100):
-    test = GeneralistJob()
-    if apply(test, t):
-        wins += 1
-        print(test.skills)
-print(wins)
 
 
-pygame.init()
+# Game Initialized Variables and Conditions
+user = Player()  # Player initialized
+turn = 0  # Turn counter, ends when 11 or higher
+win = False  # Win Condition
 
 
-screen = pygame.display.set_mode((1280, 720))
-pygame.display.set_caption("We Regret to Inform You")
-clock = pygame.time.Clock()
-running = True
 
-# starting location of rectangle
-x = 100
-y = 100
-height = 100
-width = 200
-vel = 3
+# GUI
+window = tk.Tk()
+window.geometry("980x720")
+window.title("We Regret to Inform You")
+window.mainloop()
 
 
-# game CYCLE / LOOP
-while running:
-    # sets each loop to run every 1/10 of a second
-    pygame.time.delay(10)
 
-    # starts the event loop
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+# GUI Practice
 
-    screen.fill("black")
-    pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
-    pygame.display.update()
+# label = tk.Label(window, text="Hellow World!", font=('Arial', 18))
+# label.pack(padx=20, pady=10)
+#
+# textbox = tk.Text(window, height=3, font=("Arial", 16))
+# textbox.pack()
+#
+# my_entry = tk.Entry(window)
+# my_entry.pack(padx=20, pady=20)
+#
+# button = tk.Button(window, text="Click ME!", font=("Arial", 18))
+# button.pack(pady=50)
+#
+# button_frame = tk.Frame(window)
+# button_frame.columnconfigure(0, weight=1)
+# button_frame.columnconfigure(1, weight=1)
+# button_frame.columnconfigure(2, weight=1)
+#
+# btn1 = tk.Button(button_frame, text="1", font=("Arial", 18))
+# btn1.grid(row=0, column=0, sticky=tk.W+tk.E)
+#
+# btn2 = tk.Button(button_frame, text="2", font=("Arial", 18))
+# btn2.grid(row=0, column=1, sticky=tk.W+tk.E)
+#
+# btn3 = tk.Button(button_frame, text="3", font=("Arial", 18))
+# btn3.grid(row=0, column=2, sticky=tk.W+tk.E)
+#
+# btn4 = tk.Button(button_frame, text="4", font=("Arial", 18))
+# btn4.grid(row=1, column=0, sticky=tk.W+tk.E)
+#
+# btn5 = tk.Button(button_frame, text="5", font=("Arial", 18))
+# btn5.grid(row=1, column=1, sticky=tk.W+tk.E)
+#
+# btn6 = tk.Button(button_frame, text="6", font=("Arial", 18))
+# btn6.grid(row=1, column=2, sticky=tk.W+tk.E)
+#
+# button_frame.pack(fill="x")
+#
+# anotherbtn = tk.Button(window, text="TEST")
+# anotherbtn.place(x=200, y=200, height=100, width=100)
 
-    # find keys that are pressed
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        x -= vel
 
-    if keys[pygame.K_RIGHT]:
-        x += vel
-
-    if keys[pygame.K_UP]:
-        y -= vel
-
-    if keys[pygame.K_DOWN]:
-        y += vel
-
-    if keys[pygame.K_ESCAPE]:
-        running = False
-
-
-# after the main loop
-pygame.quit()
