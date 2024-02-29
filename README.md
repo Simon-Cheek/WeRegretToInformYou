@@ -1,15 +1,25 @@
-Welcome to *We Regret to Inform You*!
+<h1>Welcome to <i>We Regret to Inform You!</i></h1>
 
-Code Infrastucture:
+<h3>Code Infrastructure:</h3>
 
-**Main.py**
--Initializes the game
-~-LATER: Gathers any Save Data~
+<h4>Main.py:</h4>
+<ul>
+  <li>-Initializes the game</li>
+  <li><i>LATER: Gathers any Save Data</i></li>
+</ul>
 
-**Director.py**
--Initializes tkinter
--Runs the Game Loop:
-  -Generates 5 random jobs
-  -Calls Turn.py to collect player input
-  -Calls apply.py on all jobs players applied to
-  -Displays Result if Jobs applied to
+<h4>Director.py</h4>
+<ul>
+  <li>-Initializes tkinter</li>
+  <li>Runs the Game Loop:
+    <ul>
+      <li>Logic (Turn logic, create 5 jobs)</li>
+      <li>Output (Creates original UI)</li>
+      <li>Input (Player uses actions)</li>
+      <li>Logic (Application Logic if applied to jobs)</li>
+      <li>Output (Result of any applied jobs)</li>
+    </ul>
+  </li>
+  
+</ul>
+
