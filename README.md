@@ -1,6 +1,8 @@
 <h1>Welcome to <i>We Regret to Inform You!</i></h1>
 
+
 <h3>Code Infrastructure:</h3>
+
 
 <h4>Main.py:</h4>
 <ul>
@@ -8,7 +10,8 @@
   <li><i>LATER: Gathers any Save Data</i></li>
 </ul>
 
-<h4>Director.py</h4>
+
+<h4>Director.py:</h4>
 <ul>
   <li>-Initializes tkinter</li>
   <li>Runs the Game Loop:
@@ -20,6 +23,11 @@
       <li>Output (Result of any applied jobs)</li>
     </ul>
   </li>
-  
+</ul>
+
+<h4>output_services.py</h4>
+<ul>
+  <li>Creates Turn UI</li>
+  <li>Creates Application Result at end of Turn</li>
 </ul>
 
