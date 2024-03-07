@@ -9,12 +9,15 @@ from Jobs.FullStack import FullStackJob
 from apply import apply
 from player import Player
 
+import page_controller as p
+
 
 
 # Game Initialized Variables and Conditions
 user = Player()  # Player initialized
 turn = 0  # Turn counter, ends when 11 or higher
 win = False  # Win Condition
+
 
 newJob = SpecialistJob()
 print(newJob.skills)
@@ -59,6 +62,14 @@ MyGUI()
 
 
 
+p.start_pages()
+
+
+# GUI
+# window = tk.Tk()
+# window.geometry("980x720")
+# window.title("We Regret to Inform You")
+# window.mainloop()
 
 
 
