@@ -6,6 +6,7 @@ from Jobs.Generalist import GeneralistJob
 from Jobs.Specialist import SpecialistJob
 from Jobs.FrontEnd import FrontEndJob
 from Jobs.FullStack import FullStackJob
+from Jobs.GenerateJobs import generate_jobs
 from apply import apply
 from player import Player
 
